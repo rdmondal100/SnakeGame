@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@300&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    
+}
+
+.body{
+    background:url("../img/sn.png");
+    min-height: 100vh;
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#board{
+    position: relative;
+    top:10px;
+    background: linear-gradient(rgb(136, 150, 136),rgb(31, 2, 2));
+    width:90vmin;
+    height:92vmin;
+    border:2px solid black;
+    display: grid;
+    grid-template-columns: repeat(18,1fr);
+    grid-template-rows: repeat(18,1fr); 
+
+}
+
+#scoreBox{   
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: 'Unbounded', cursive;
+    color: wheat;
+}
+
+#allScore{
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    top: 1rem;
+    right:4rem;
+    gap:20px;
+    color: wheat;
+    
+
+}
+
+#highScorBox{  
+    font-size: 1.8rem;
+    font-weight: bold;
+    font-family: 'Unbounded', cursive;
+    color: wheat;
+}
+
+.head{
+    background: linear-gradient(red,black); ;
+    border:2px solid rgb(255, 0, 0);
+    border-radius: 12px;
+
+}
+.snake{
+    background: linear-gradient(rgb(195, 130, 130),rgb(22, 12, 12)) ;
+    border-radius: 25px;
+    border:.25vmin solid rgb(205, 97, 97);
+}
+
+.food{
+    background: linear-gradient(white, black);
+    border:1px solid white;
+    border-radius: 20px;
+}
+
+@media (max-width: 1350px){
+  #board{
+    top: 2rem!important;
+    width: 70vmin !important;;
+    height:72vmin !important;
+  }
+  #allScore{
+    flex-direction: row!important;
+    font-size: 1rem!important;
+  }
+  #highScorBox{
+    font-size: 1.2rem!important;
+   }
+   #scoreBox{
+    font-size: 1rem!important;
+   }
+
+
+}
+@media (max-width: 650px){
+    #allScore{
+        font-size: 1rem!important;
+
+    }
+   #highScorBox{
+    font-size: .6rem!important;
+   }
+   #scoreBox{
+    font-size: .5rem!important;
+   }
+}
